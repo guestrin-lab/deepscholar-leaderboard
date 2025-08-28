@@ -333,11 +333,11 @@
         <div class="header">
             <h1>🏆 DeepScholar-Bench Leaderboard</h1>
             <p>Comprehensive Leaderboard for Research AI Systems</p>
-            <div class="timestamp">Last updated: 2025-08-27 21:31:59 UTC</div>
+            <div class="timestamp">Last updated: 2025-08-28 15:24:29 UTC</div>
             <div style="margin-top: 10px;">
                 <a href="https://github.com/guestrin-lab/deepscholar-bench" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">GitHub Repository</a>
                 &nbsp;|&nbsp;
-                <a href="https://arxiv.org/abs/2508.20033" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">Research Paper</a>
+                <a href="#" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">Research Paper</a>
             </div>
             <div style="margin-top: 20px;">
                 <a href="#contact" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">Submit Your Solution</a>
@@ -347,37 +347,13 @@
         <div class="metric-info">
             <h3>🌐🔍 About DeepScholar-Bench</h3>
             <p>
-                <strong>DeepScholar-Bench</strong> is a live benchmark for evaluating generative research synthesis systems. 
-                It draws queries from recent ArXiv papers and focuses on generating related work sections by retrieving, 
-                synthesizing, and citing prior research. The benchmark provides holistic automated evaluation across three 
-                key dimensions with metrics that show strong agreement with expert human judgments.
+                <strong>DeepScholar-Bench</strong> provides a live benchmark for evaluating generative research synthesis systems. 
+                Its benchmark dataset is generated based on recent ArXiv papers, requiring systems to generate a related work sections by retrieving, 
+                synthesizing, and citing sources from the web. The benchmark provides holistic evaluation across three 
+                critical capabilities of generative research synthesis: knowledge synthesis, retrieval quality and verifiability.
             </p>
         </div>
         
-        <!-- Interactive Radar Charts Section -->
-        <div class="radar-charts-section" style="margin: 40px 30px; padding: 20px; background: #f8f9ff; border-radius: 12px; border-left: 5px solid #667eea;">
-            <h3 style="color: #1e3c72; margin-bottom: 15px;">📊 Interactive Radar Charts</h3>
-            <p style="margin-bottom: 20px;">Check/uncheck systems to compare their performance across all metrics:</p>
-            
-            <div class="flex" style="display: flex; gap: 30px; align-items: flex-start;">
-                <!-- System Checkboxes Panel -->
-                <div style="min-width: 200px; max-width: 250px;">
-                    <div style="margin-bottom: 15px;">
-                        <button onclick="selectAllSystems()" style="padding: 6px 12px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 8px;">Select All</button>
-                        <button onclick="clearAllSystems()" style="padding: 6px 12px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Clear All</button>
-                    </div>
-                    <div id="systemCheckboxes" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background: white;">
-                        <!-- Checkboxes will be populated here -->
-                    </div>
-                </div>
-                
-                <!-- Radar Chart -->
-                <div style="flex: 1; display: flex; justify-content: center;">
-                    <canvas id="radarChart" width="600" height="600" style="max-width: 100%; height: auto;"></canvas>
-                </div>
-            </div>
-            
-        </div>
 
         
         <div class="filter-container" style="background: #f8f9ff; margin: 20px 30px; padding: 20px; border-radius: 12px; border-left: 5px solid #667eea;">
@@ -393,8 +369,8 @@
                         <label style="font-weight: 600; color: #1e3c72; margin-right: 10px;">System Type:</label>
                         <select id="typeFilter" onchange="applyFilters()" style="padding: 8px 12px; border: 2px solid #667eea; border-radius: 6px; background: white; font-size: 14px; min-width: 180px;">
                             <option value="all">All Types</option>
-                                                    <option value="Open">Open</option>
-                        <option value="Closed">Closed</option>
+                                                    <option value="Open Pipeline">Open Pipeline</option>
+                        <option value="Closed Pipeline">Closed Pipeline</option>
                         </select>
                     </div>
                 </div>
@@ -441,7 +417,7 @@
     
                     <tr>
                         <td class="system-name">OpenAI DeepResearch<br/>
-                            <span style="background: #f8d7da; color: #721c24; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Closed</span>
+                            <span style="background: #f8d7da; color: #721c24; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Closed Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">o3</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #27ae60; font-weight: 600;">0.857</span></td>
@@ -455,7 +431,7 @@
 
                     <tr>
                         <td class="system-name">Search AI (o3)<br/>
-                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open</span>
+                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">o3</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #27ae60; font-weight: 600;">0.849</span></td>
@@ -469,7 +445,7 @@
 
                     <tr>
                         <td class="system-name">Search AI (Gemini-2.5-pro)<br/>
-                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open</span>
+                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Gemini-2.5-pro</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #27ae60; font-weight: 600;">0.706</span></td>
@@ -483,7 +459,7 @@
 
                     <tr>
                         <td class="system-name">Search AI (Claude-opus-4)<br/>
-                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open</span>
+                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Claude-opus-4</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #f39c12; font-weight: 600;">0.698</span></td>
@@ -497,7 +473,7 @@
 
                     <tr>
                         <td class="system-name">Search AI (GPT-4.1)<br/>
-                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open</span>
+                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">GPT4.1</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #f39c12; font-weight: 600;">0.556</span></td>
@@ -511,7 +487,7 @@
 
                     <tr>
                         <td class="system-name">Search AI (Llama-4-Scout)<br/>
-                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open</span>
+                            <span style="background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Open Pipeline</span>
                             <span style="background: #f0f0ff; color: #764ba2; padding: 2px 6px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Llama-4-scout</span>
                         </td>
 <td class="metric-score" style="background: white;"><span style="color: #e74c3c; font-weight: 600;">0.151</span></td>
@@ -525,6 +501,31 @@
 
                 </tbody>
             </table>
+        </div>
+        
+        <!-- Interactive Radar Charts Section -->
+        <div class="radar-charts-section" style="margin: 40px 30px; padding: 20px; background: #f8f9ff; border-radius: 12px; border-left: 5px solid #667eea;">
+            <h3 style="color: #1e3c72; margin-bottom: 15px;">📊 Interactive Radar Charts</h3>
+            <p style="margin-bottom: 20px;">Check/uncheck systems to compare their performance across all metrics:</p>
+            
+            <div class="flex" style="display: flex; gap: 30px; align-items: flex-start;">
+                <!-- System Checkboxes Panel -->
+                <div style="min-width: 200px; max-width: 250px;">
+                    <div style="margin-bottom: 15px;">
+                        <button onclick="selectAllSystems()" style="padding: 6px 12px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 8px;">Select All</button>
+                        <button onclick="clearAllSystems()" style="padding: 6px 12px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Clear All</button>
+                    </div>
+                    <div id="systemCheckboxes" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background: white;">
+                        <!-- Checkboxes will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Radar Chart -->
+                <div style="flex: 1; display: flex; justify-content: center;">
+                    <canvas id="radarChart" width="600" height="600" style="max-width: 100%; height: auto;"></canvas>
+                </div>
+            </div>
+            
         </div>
 
         <!-- Evaluation Metrics Section -->
@@ -559,23 +560,22 @@
         <!-- Contact Form Section -->
         <div id="contact" class="contact-section" style="margin: 40px 30px; padding: 20px; background: #f8f9ff; border-radius: 12px; border-left: 5px solid #667eea;">
             <h3 style="color: #1e3c72; margin-bottom: 15px;">📬 Submit Your Solution</h3>
-            <p>If you'd like to submit your solution to the DeepScholar-Bench leaderboard, please use our Google Form:</p>
+            <p>If you'd like to submit your solution to the DeepScholar-Bench leaderboard, please contact us:</p>
             
             <div style="margin-top: 20px; text-align: center;">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeug4igDHhVUU3XnrUSeMVRUJFKlHP28i8fcBAu_LHCkqdV1g/viewform?usp=dialog" 
-                   target="_blank"
+                <a href="mailto:negara@berkeley.edu?subject=DeepScholar-Bench Submission&body=Hello,%0D%0A%0D%0AI would like to submit my solution to the DeepScholar-Bench leaderboard.%0D%0A%0D%0APlease find my submission details below:%0D%0A%0D%0A[Your message here]%0D%0A%0D%0ABest regards," 
                    style="background: #667eea; color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; font-size: 16px;">
-                    📝 Submit via Google Form
+                    📧 Email negara@berkeley.edu
                 </a>
                 
                 <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
-                    For questions and inquiries, please contact: <a href="mailto:lianapat@stanford.edu" style="color: #667eea;">lianapat@stanford.edu</a> or <a href="mailto:negara@berkeley.edu" style="color: #667eea;">negara@berkeley.edu</a>
+                    Click the button above to open your email client with a pre-filled message template.
                 </p>
             </div>
         </div>
         
         <div class="footer">
-            <p>🌐🔍 DeepScholar-Bench: A live benchmark for holistically evaluating AI systems for generative research synthesis.</p>
+            <p>🌐🔍 DeepScholar-Bench: A comprehensive benchmark for evaluating research AI systems across multiple dimensions of quality and accuracy.</p>
         </div>
     </div>
     
@@ -586,7 +586,7 @@
         let sortDirection = {};
         let allRows = []; // Store all original rows for filtering
         let currentFilter = 'all';
-        let radarChart = null; // Global variable for radar 
+        let radarChart = null; // Global variable for radar chart
         let leaderboardData = []; // Store the leaderboard data for radar charts
         
         // Initialize the page

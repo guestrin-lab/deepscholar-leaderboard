@@ -355,31 +355,6 @@
         </div>
 
         
-        <div class="filter-container" style="background: #f8f9ff; margin: 20px 30px; padding: 20px; border-radius: 12px; border-left: 5px solid #667eea;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
-                <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-                        <label style="font-weight: 600; color: #1e3c72; margin-right: 10px;">Language Model:</label>
-                        <select id="lmFilter" onchange="applyFilters()" style="padding: 8px 12px; border: 2px solid #667eea; border-radius: 6px; background: white; font-size: 14px; min-width: 180px;">
-                            <option value="all">All Models</option>
-                        </select>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-                        <label style="font-weight: 600; color: #1e3c72; margin-right: 10px;">System Type:</label>
-                        <select id="typeFilter" onchange="applyFilters()" style="padding: 8px 12px; border: 2px solid #667eea; border-radius: 6px; background: white; font-size: 14px; min-width: 180px;">
-                            <option value="all">All Types</option>
-                                                    <option value="Open Pipeline">Open Pipeline</option>
-                        <option value="Closed Pipeline">Closed Pipeline</option>
-                        </select>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <button onclick="clearAllFilters()" style="padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">Clear All Filters</button>
-                    <span id="filterStatus" style="color: #666; font-style: italic;"></span>
-                </div>
-            </div>
-        </div>
-        
         <!-- Interactive Radar Charts Section -->
         <div class="radar-charts-section" style="margin: 40px 30px; padding: 20px; background: #f8f9ff; border-radius: 12px; border-left: 5px solid #667eea;">
             <h3 style="color: #1e3c72; margin-bottom: 15px;">📊 Interactive Radar Charts</h3>
@@ -403,6 +378,32 @@
                 </div>
             </div>
             
+        </div>
+        
+        <!-- Filter Controls -->
+        <div class="filter-container" style="background: #f8f9ff; margin: 20px 30px; padding: 20px; border-radius: 12px; border-left: 5px solid #667eea;">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                        <label style="font-weight: 600; color: #1e3c72; margin-right: 10px;">Language Model:</label>
+                        <select id="lmFilter" onchange="applyFilters()" style="padding: 8px 12px; border: 2px solid #667eea; border-radius: 6px; background: white; font-size: 14px; min-width: 180px;">
+                            <option value="all">All Models</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                        <label style="font-weight: 600; color: #1e3c72; margin-right: 10px;">System Type:</label>
+                        <select id="typeFilter" onchange="applyFilters()" style="padding: 8px 12px; border: 2px solid #667eea; border-radius: 6px; background: white; font-size: 14px; min-width: 180px;">
+                            <option value="all">All Types</option>
+                            <option value="Open Pipeline">Open Pipeline</option>
+                            <option value="Closed Pipeline">Closed Pipeline</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button onclick="clearAllFilters()" style="padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">Clear All Filters</button>
+                    <span id="filterStatus" style="color: #666; font-style: italic;"></span>
+                </div>
+            </div>
         </div>
 
 

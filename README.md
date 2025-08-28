@@ -67,9 +67,11 @@ The leaderboard currently shows the top research AI systems ranked by their aver
 
 To submit your solution to the DeepScholar-Bench leaderboard:
 
-1. Use the contact form on the leaderboard page
+1. Use our [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeug4igDHhVUU3XnrUSeMVRUJFKlHP28i8fcBAu_LHCkqdV1g/viewform?usp=dialog) to submit your results
 2. Provide details about your system architecture and methodology
 3. Submit your results for evaluation
+
+For questions and inquiries, please contact: lianapat@stanford.edu
 
 ## 📚 References
 

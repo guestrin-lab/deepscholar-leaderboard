@@ -26,7 +26,7 @@ The benchmark evaluates systems across three main categories:
 ## 🚀 Live Leaderboard
 
 The live leaderboard is hosted on GitHub Pages and can be accessed at:
-**https://narabzad.github.io/deepscholar-bench/**
+**https://guestrin-lab.github.io/deepscholar-leaderboard/**
 
 ## 📁 Repository Structure
 

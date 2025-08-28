@@ -1,0 +1,7 @@
+System Name,lm,System Type,Org.,Nugget<br>Cov.,Rel.<br>Rate.,Doc.<br>Imp.,Ref.<br>Cov.,Cite-P,Claim<br>Cov.
+OpenAI DeepResearch,o3,Closed,0.8571,0.392,0.6287,0.176,0.2281,0.3986,0.1381
+Search AI (o3),o3,Open,0.8492000000000001,0.348,0.6095,0.036,0.2169,0.425,0.4955
+Search AI (Gemini-2.5-pro),Gemini-2.5-pro,Open,0.7062999999999999,0.277,0.5827,0.014,0.0909,0.41450000000000004,0.39759999999999995
+Search AI (Claude-opus-4),Claude-opus-4,Open,0.6984,0.307,0.5827,0.012,0.1728,0.7009000000000001,0.7602
+Search AI (GPT-4.1),GPT4.1,Open,0.5556,0.265,0.4902,0.013,0.0679,0.4982,0.46950000000000003
+Search AI (Llama-4-Scout),Llama-4-scout,Open,0.1508,0.193,0.4451,0.013,0.0674,0.31579999999999997,0.3685

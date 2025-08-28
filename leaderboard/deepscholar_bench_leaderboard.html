@@ -380,6 +380,30 @@
             </div>
         </div>
         
+        <!-- Interactive Radar Charts Section -->
+        <div class="radar-charts-section" style="margin: 40px 30px; padding: 20px; background: #f8f9ff; border-radius: 12px; border-left: 5px solid #667eea;">
+            <h3 style="color: #1e3c72; margin-bottom: 15px;">📊 Interactive Radar Charts</h3>
+            <p style="margin-bottom: 20px;">Check/uncheck systems to compare their performance across all metrics:</p>
+            
+            <div class="flex" style="display: flex; gap: 30px; align-items: flex-start;">
+                <!-- System Checkboxes Panel -->
+                <div style="min-width: 200px; max-width: 250px;">
+                    <div style="margin-bottom: 15px;">
+                        <button onclick="selectAllSystems()" style="padding: 6px 12px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 8px;">Select All</button>
+                        <button onclick="clearAllSystems()" style="padding: 6px 12px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Clear All</button>
+                    </div>
+                    <div id="systemCheckboxes" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background: white;">
+                        <!-- Checkboxes will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Radar Chart -->
+                <div style="flex: 1; display: flex; justify-content: center;">
+                    <canvas id="radarChart" width="600" height="600" style="max-width: 100%; height: auto;"></canvas>
+                </div>
+            </div>
+            
+        </div>
 
 
     <div class='table-container'>

@@ -428,6 +428,7 @@ def create_html_leaderboard(data, metric_columns):
                 <a href="https://github.com/guestrin-lab/deepscholar-bench" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">GitHub Repository</a>
                 &nbsp;|&nbsp;
                 <a href="https://arxiv.org/abs/2508.20033" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">Research Paper</a>
+                &nbsp;|&nbsp;
                 <a href="deep-scholar.vercel.app" target="_blank" style="color: #ffeb3b; text-decoration: none; font-weight: bold;">DeepResearch Preview</a>
 
           
